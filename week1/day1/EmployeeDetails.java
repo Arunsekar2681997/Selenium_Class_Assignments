@@ -25,6 +25,12 @@ public class EmployeeDetails {
 		System.out.println("Printing The Mobile Number :"+mobileNumber);
 		System.out.println("Printing The PinCode :"+pinCode);
 		System.out.println("Printing The Lucky Number :"+luckyNumber);
+		
+		int x =2;
+		System.out.println(++x);
+		System.out.println(x++);
+		
+		
 
 	}
 
