@@ -38,8 +38,8 @@ public class Amazon {
 		
 		//	(like American Tourister, Generic)
 		//	07) Choose New Arrivals (Sort)
-		driver.findElement(By.xpath("//span[@class='a-button-text a-declarative']")).click();
-		driver.findElement(By.xpath("//ul[@class='a-nostyle a-list-link']//li//a[contains(text(),'Newest')]")).click();
+		driver.findElement(By.xpath("//span[@class='a-dropdown-prompt']")).click();
+		driver.findElement(By.xpath("//a[@class='a-dropdown-link' and contains(text(), 'Newest')]")).click();
 		
 		//	08) Print the first resulting bag info (name, discounted price)
 		String productName = driver.findElement(By.xpath("//h2[@class='a-size-base-plus a-spacing-none a-color-base a-text-normal']")).getText();
