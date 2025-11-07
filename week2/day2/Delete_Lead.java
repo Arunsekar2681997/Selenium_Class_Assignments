@@ -1,5 +1,7 @@
 package week2.day2;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +17,8 @@ public class Delete_Lead {
 
 		//creating object & launch the browser
 		ChromeDriver driver = new ChromeDriver(options);
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		//Load the URL
 		driver.get("http://leaftaps.com/opentaps/control/main");
@@ -39,6 +43,15 @@ public class Delete_Lead {
 		
 		//click Find Leads Option
 		driver.findElement(By.linkText("Find Leads")).click();
+		
+		//clcik the phone tab
+		driver.findElement(By.xpath("//span[@class='x-tab-strip-text ' and text()='Phone']")).click();
+		
+		//enter PhoneNumber
+		driver.findElement(By.xpath("//input[@class=' x-form-text x-form-field ' and @name='phoneNumber']")).sendKeys("9876543210");
+		
+		//click find leads option
+		driver.findElement(By.xpath("//button[@class='x-btn-text' and text()='Find Leads']")).click();
 		
 		
 		//Wait for sometime to load the page
